@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+	<meta charset="UTF-8">
+	
 	<title>Intranet Diaz Morones</title>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function(){
+			$("ul.nav li a").mouseover(function(){
+				$("#TitleIcon").text($(this).prop("title"));
+			});
+			$("ul.nav li a").mouseout(function(){
+				$("#TitleIcon").text("");
+			});
+
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="font/css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<a href="proyecto_administracion/">Administracion de Proyectos</a>
-<br>
-<a href="proyecto_administracion/busqueda_candidatos/busqueda.php">Busqueda de Candidatos (DB Interna)</a>
-<br>
-<a href="tickets/">Sistema de Tickets</a>
+
+	<div class="page-wrap">
+
+		
+
+		<nav>
+			<ul class="nav">
+				<li><a title="Administracion" href="../proyecto_administracion/" ><i class="fa fa-pie-chart fa-4x"></i></a></li>
+				<li><a title="Busqueda de Candidatos" href="../proyecto_administracion/busqueda_candidatos/busqueda.php" ><i class="fa fa-user fa-4x"></i></a></li>
+				<li><a title="" href="#" ><i class="fa fa-paper-plane-o fa-4x"></i></a></li>
+				<li><a title="Sistema de Tickets" href="../tickets/index.php" ><i class="fa fa-ticket fa-4x"></i></a></li>
+			</ul>
+		</nav>
+		<nav>
+			<ul class="nav">
+				<li><a title="" href="#" ><i class="fa fa-graduation-cap fa-4x"></i></a></li>
+				<li><a title="Temas de Ayuda" href="#" ><i class="fa fa-question fa-4x"></i></a></li>
+				
+			</ul>
+		</nav>
+
+	</div>
+	<div class="divTitleIcon">
+		<span id="TitleIcon" text=""></span>
+	</div>
+
+
 </body>
+
 </html>
